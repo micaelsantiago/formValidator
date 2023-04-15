@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  --colorBackgroundBody: #3585F7;
+  --colorHover: #2b6cc7;
+  --colorBackground: #FFF;
+  --colorInput: #E6E6E6;
+  --colorText: #79777B;
+  --colorError: #f44336;
+  --borderRadius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+input {
+  caret-color: var(--colorText);
+}
+
+.row {
+  width: 20px;
+  height: 5px;
+  background: var(--colorBackgroundBody);
+}
+
+.msgError {
+  display: none;
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  background-color: #ffebee;
+  color: var(--colorError);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--colorBackgroundBody);
+}
+
+.container .formArea {
+  width: 95vw;
+  padding: 1.5rem;
+  background: var(--colorBackground);
+}
+
+.container .formArea .formAreaTitle {
+  margin: 0 0 1.5rem;
+}
+
+.container .formArea .formAreaTitle h1 {
+  font-size: 2rem;
+}
+
+.container .formArea form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .formArea form label {
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: var(--colorText);
+}
+
+.container .formArea form label input {
+  width: 100%;
+  margin-top: 5px;
+  padding: .75rem;
+  border: 0;
+  outline: 0;
+  background: var(--colorInput);
+  border-radius: var(--borderRadius);
+}
+
+.container .formArea form .links {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.container .formArea form .links a {
+  text-decoration: none;
+  color: var(--colorBackgroundBody);
+}
+
+.container .formArea form button {
+  padding: .75rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  border-radius: var(--borderRadius);
+  background: var(--colorBackgroundBody);
+  color: var(--colorBackground);
+  transition: all 0.3s ease-in-out;
+}
+
+.container .formArea form button:hover {
+  background: var(--colorHover);
+}
+
+@media (min-width: 768px) {
+  .container .formArea {
+    width: 50vw;
+  }
+}
